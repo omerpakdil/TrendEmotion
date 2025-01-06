@@ -1,0 +1,214 @@
+# Cursor IDE Project Rules
+
+## Code Organization
+
+### Project Structure
+- src/
+  - components/     # React components
+  - services/       # API and business logic
+  - hooks/          # Custom React hooks
+  - utils/          # Helper functions
+  - types/          # TypeScript types
+  - assets/         # Static assets
+  - styles/         # Global styles
+  - tests/          # Test files
+
+### Naming Conventions
+- Components: PascalCase
+- Files: kebab-case
+- Functions: camelCase
+- Constants: UPPER_SNAKE_CASE
+- Types/Interfaces: PascalCase
+
+## Code Style
+
+### TypeScript
+- Strict mode enabled
+- Explicit return types
+- Interface over type
+- No any types
+- Proper error handling
+
+### React
+- Functional components
+- Custom hooks for logic
+- Props interface definition
+- Proper component memoization
+- Error boundaries implementation
+
+## Documentation
+
+### Code Comments
+- JSDoc for functions
+- Component prop documentation
+- Complex logic explanation
+- TODO format: // TODO(username): description
+- FIXME format: // FIXME(username): description
+
+### Component Documentation
+```tsx
+/**
+ * @component ComponentName
+ * @description Brief description
+ * @param {PropType} propName - prop description
+ * @returns {JSX.Element} component description
+ */
+```
+
+## Testing
+
+### Test Structure
+- Unit tests: *.test.ts
+- Integration tests: *.integration.test.ts
+- E2E tests: *.e2e.test.ts
+- Snapshot tests: *.snapshot.test.ts
+
+### Test Coverage
+- Minimum coverage: 80%
+- Critical paths: 100%
+- API endpoints: 100%
+- User flows: 100%
+
+## Performance
+
+### Frontend
+- Bundle size < 500KB
+- First paint < 1.5s
+- Time to interactive < 3s
+- Lighthouse score > 90
+- No memory leaks
+
+### API
+- Response time < 200ms
+- Proper error codes
+- Rate limiting
+- Cache implementation
+- Request validation
+
+## Security
+
+### Authentication
+- JWT implementation
+- Token refresh
+- Session management
+- 2FA for admin
+- Rate limiting
+
+### Data Protection
+- HTTPS only
+- XSS prevention
+- CSRF protection
+- Input sanitization
+- Secure headers
+
+## Git Workflow
+
+### Branches
+- main: production
+- develop: development
+- feature/*: new features
+- bugfix/*: bug fixes
+- hotfix/*: urgent fixes
+
+### Commits
+```
+type(scope): description
+
+- type: feat|fix|docs|style|refactor|test|chore
+- scope: component name or context
+- description: present tense, lowercase
+```
+
+## IDE Settings
+
+### Editor Config
+```editorconfig
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+```
+
+### Prettier Config
+```json
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2
+}
+```
+
+### ESLint Rules
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": "error",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
+```
+
+## Feature Implementation Guidelines
+
+### Core Features
+- Must follow TDD approach
+- Must include documentation
+- Must have error handling
+- Must be responsive
+- Must be accessible
+
+### Premium Features
+- Must be feature flagged
+- Must include analytics
+- Must have proper access control
+- Must be optimized
+- Must include user guide
+
+## Deployment
+
+### Environment Variables
+- Must use .env files
+- Must not commit secrets
+- Must document all variables
+- Must validate at startup
+- Must use proper naming
+
+### Build Process
+- Must pass all tests
+- Must pass linting
+- Must pass type checking
+- Must optimize assets
+- Must generate sourcemaps
+
+## Monitoring
+
+### Error Tracking
+- Must implement error boundary
+- Must log all API errors
+- Must track performance
+- Must monitor memory usage
+- Must alert on critical issues
+
+### Analytics
+- Must track user journeys
+- Must measure performance
+- Must monitor API usage
+- Must track feature usage
+- Must measure conversion 
