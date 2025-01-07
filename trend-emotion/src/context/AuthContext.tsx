@@ -1,11 +1,14 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { User } from '../types';
+import type { User } from '../types';
+import type { LoginCredentials, RegisterCredentials } from '../types/auth';
+import { auth } from '../services/api';
 
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  register: (email: string, password: string, name: string) => Promise<void>;
+  setUser: (user: User | null) => void;
+  login: (data: LoginCredentials) => Promise<void>;
+  register: (data: RegisterCredentials) => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -16,19 +19,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }): JSX.E
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check for stored token and validate it
     const checkAuth = async (): Promise<void> => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          // TODO: Implement token validation
-          const userData = localStorage.getItem('user');
-          if (userData) {
-            setUser(JSON.parse(userData));
-          }
+          const userData = await auth.validateToken();
+          setUser(userData);
         } catch (error) {
           localStorage.removeItem('token');
-          localStorage.removeItem('user');
         }
       }
       setIsLoading(false);
@@ -37,46 +35,22 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }): JSX.E
     void checkAuth();
   }, []);
 
-  const login = async (email: string, password: string): Promise<void> => {
+  const login = async (data: LoginCredentials): Promise<void> => {
     try {
-      // TODO: Implement actual API call
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Login failed');
-      }
-
-      const { user: userData, token } = await response.json();
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(userData));
-      setUser(userData);
+      const response = await auth.login(data);
+      localStorage.setItem('token', response.token);
+      setUser(response.user);
     } catch (error) {
       console.error('Login error:', error);
       throw error;
     }
   };
 
-  const register = async (email: string, password: string, name: string): Promise<void> => {
+  const register = async (data: RegisterCredentials): Promise<void> => {
     try {
-      // TODO: Implement actual API call
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, name }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Registration failed');
-      }
-
-      const { user: userData, token } = await response.json();
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(userData));
-      setUser(userData);
+      const response = await auth.register(data);
+      localStorage.setItem('token', response.token);
+      setUser(response.user);
     } catch (error) {
       console.error('Registration error:', error);
       throw error;
@@ -85,12 +59,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }): JSX.E
 
   const logout = async (): Promise<void> => {
     localStorage.removeItem('token');
-    localStorage.removeItem('user');
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, login, register, logout }}>
+    <AuthContext.Provider value={{ user, isLoading, setUser, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -2,30 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark tema (varsayılan) */
+:root {
+  --background-primary: #111827; /* gray-900 */
+  --background-primary-80: rgba(17, 24, 39, 0.8); /* gray-900 with 80% opacity */
+  --background-secondary: #1f2937; /* gray-800 */
+  --text-primary: #f3f4f6; /* gray-100 */
+  --text-secondary: #d1d5db; /* gray-300 */
+  --border-color: #374151; /* gray-700 */
+  --card-background: rgba(31, 41, 55, 0.5); /* gray-800 with opacity */
+  --card-border: rgba(55, 65, 81, 0.2); /* gray-700 with opacity */
+  --input-background: rgba(31, 41, 55, 0.5); /* gray-800 with opacity */
+  --input-border: rgba(55, 65, 81, 0.5); /* gray-700 with opacity */
+}
+
+/* Light tema */
+:root.light {
+  --background-primary: #ffffff !important; /* white */
+  --background-primary-80: rgba(255, 255, 255, 0.8) !important; /* white with 80% opacity */
+  --background-secondary: #f9fafb !important; /* gray-50 */
+  --text-primary: #111827 !important; /* gray-900 */
+  --text-secondary: #4b5563 !important; /* gray-600 */
+  --border-color: #e5e7eb !important; /* gray-200 */
+  --card-background: rgba(255, 255, 255, 0.8) !important; /* white with opacity */
+  --card-border: rgba(229, 231, 235, 0.5) !important; /* gray-200 with opacity */
+  --input-background: rgba(255, 255, 255, 0.8) !important; /* white with opacity */
+  --input-border: rgba(229, 231, 235, 0.8) !important; /* gray-200 with opacity */
+}
+
+/* Dark tema */
+:root.dark {
+  --background-primary: #111827 !important; /* gray-900 */
+  --background-primary-80: rgba(17, 24, 39, 0.8) !important; /* gray-900 with 80% opacity */
+  --background-secondary: #1f2937 !important; /* gray-800 */
+  --text-primary: #f3f4f6 !important; /* gray-100 */
+  --text-secondary: #d1d5db !important; /* gray-300 */
+  --border-color: #374151 !important; /* gray-700 */
+  --card-background: rgba(31, 41, 55, 0.5) !important; /* gray-800 with opacity */
+  --card-border: rgba(55, 65, 81, 0.2) !important; /* gray-700 with opacity */
+  --input-background: rgba(31, 41, 55, 0.5) !important; /* gray-800 with opacity */
+  --input-border: rgba(55, 65, 81, 0.5) !important; /* gray-700 with opacity */
+}
+
 @layer base {
-  html {
-    font-family: Inter, system-ui, sans-serif;
-  }
-  
-  body {
-    @apply bg-gray-50;
+  html, body, #root {
+    @apply min-h-screen m-0 p-0;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 }
 
 @layer components {
-  .btn {
+  .bg-app {
+    @apply transition-colors duration-200;
+    background-color: var(--background-primary) !important;
+  }
+
+  .bg-app-secondary {
+    @apply transition-colors duration-200;
+    background-color: var(--background-secondary) !important;
+  }
+
+  .text-app {
+    @apply transition-colors duration-200;
+    color: var(--text-primary) !important;
+  }
+
+  .text-app-secondary {
+    @apply transition-colors duration-200;
+    color: var(--text-secondary) !important;
+  }
+
+  .border-app {
+    @apply transition-colors duration-200;
+    border-color: var(--border-color) !important;
+  }
+
+  .card {
+    @apply border rounded-xl p-6 backdrop-blur-xl transition-all duration-200;
+    background-color: var(--card-background) !important;
+    border-color: var(--card-border) !important;
+  }
+
+  .input {
+    @apply border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500/50 transition-all duration-200;
+    background-color: var(--input-background) !important;
+    border-color: var(--input-border) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .button {
     @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
   }
-  
-  .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700;
+
+  .button-primary {
+    @apply button bg-primary-600 text-white hover:bg-primary-700;
   }
-  
-  .btn-outline {
-    @apply btn border-2 border-primary-600 text-primary-600 hover:bg-primary-50;
+
+  .button-secondary {
+    @apply button border transition-all duration-200;
+    background-color: var(--card-background) !important;
+    border-color: var(--card-border) !important;
+    color: var(--text-primary) !important;
   }
-  
-  .nav-link {
-    @apply text-gray-700 hover:text-primary-600 transition-colors duration-200;
+
+  /* Custom background gradients */
+  .app-background {
+    background: linear-gradient(
+      to bottom right, 
+      var(--background-primary), 
+      var(--background-primary), 
+      var(--background-primary)
+    ) !important;
   }
+
+  .content-background {
+    background: linear-gradient(
+      to bottom right, 
+      var(--background-secondary), 
+      var(--background-primary)
+    ) !important;
+    backdrop-filter: blur(16px);
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
 }

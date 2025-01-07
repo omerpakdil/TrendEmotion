@@ -9,10 +9,14 @@ datasource db {
 
 model User {
   id        String   @id @default(uuid())
-  email     String   @unique
   name      String
+  email     String   @unique
   password  String
   isPremium Boolean  @default(false)
+  language  String?  @default("en")
+  theme     String?  @default("dark")
+  notificationSettings String?  @default("{}")
+  securitySettings    String?  @default("{}")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

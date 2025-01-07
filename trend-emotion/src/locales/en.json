@@ -1,0 +1,239 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "viewAll": "View All",
+    "timeframes": {
+      "1h": "1H",
+      "24h": "24H",
+      "7d": "7D",
+      "30d": "30D"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "name": "Full Name",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?"
+  },
+  "home": {
+    "hero": {
+      "title1": "Discover Market",
+      "title2": "Sentiment Trends",
+      "description": "Analyze market sentiment in real-time. Make data-driven decisions with our advanced sentiment analysis tools and stay ahead of market trends.",
+      "getStartedButton": "Get Started",
+      "dashboardButton": "Go to Dashboard"
+    },
+    "features": {
+      "subtitle": "Features",
+      "title": "Everything you need for market analysis",
+      "description": "Get real-time insights into market sentiment and make informed decisions with our comprehensive suite of tools.",
+      "realtime": {
+        "title": "Real-time Analysis",
+        "description": "Get instant insights into market sentiment with our real-time analysis tools."
+      },
+      "trends": {
+        "title": "Trend Detection",
+        "description": "Identify emerging trends before they become mainstream."
+      },
+      "alerts": {
+        "title": "Custom Alerts",
+        "description": "Set up personalized alerts for the markets you care about."
+      },
+      "analytics": {
+        "title": "Advanced Analytics",
+        "description": "Deep dive into market data with our advanced analytics tools."
+      }
+    },
+    "stats": {
+      "activeUsers": {
+        "label": "Active Users",
+        "value": "10K+"
+      },
+      "marketsAnalyzed": {
+        "label": "Markets Analyzed",
+        "value": "100+"
+      },
+      "dailyAnalysis": {
+        "label": "Daily Analysis",
+        "value": "1M+"
+      },
+      "accuracyRate": {
+        "label": "Accuracy Rate",
+        "value": "95%"
+      }
+    },
+    "cta": {
+      "title": "Ready to dive in?",
+      "subtitle": "Start your journey today."
+    },
+    "footer": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "pricing": "Pricing",
+        "docs": "Documentation"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "blog": "Blog",
+        "careers": "Careers"
+      },
+      "support": {
+        "title": "Support",
+        "help": "Help Center",
+        "contact": "Contact Us",
+        "status": "System Status"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "security": "Security"
+      },
+      "copyright": "© 2024 TrendEmotion. All rights reserved."
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "watchlist": "Watchlist",
+    "analysis": "Analysis",
+    "profile": "Profile Settings"
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "subtitle": "Manage your account settings and preferences",
+    "tabs": {
+      "general": "General",
+      "security": "Security",
+      "notifications": "Notifications",
+      "preferences": "Preferences"
+    },
+    "general": {
+      "profilePicture": "Profile Picture",
+      "changeAvatar": "Change Avatar",
+      "fullName": "Full Name",
+      "email": "Email Address"
+    },
+    "security": {
+      "twoFactor": {
+        "title": "Two-Factor Authentication",
+        "description": "Add an extra layer of security to your account"
+      },
+      "sessionTimeout": {
+        "title": "Session Timeout",
+        "15min": "15 minutes",
+        "30min": "30 minutes",
+        "1hour": "1 hour",
+        "2hours": "2 hours"
+      },
+      "changePassword": "Change Password",
+      "passwordDescription": "Update your password to keep your account secure",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm New Password",
+      "passwordError": {
+        "mismatch": "New passwords do not match",
+        "incorrect": "Current password is incorrect",
+        "requirements": "Password must be at least 8 characters"
+      }
+    },
+    "notifications": {
+      "email": {
+        "title": "Email Notifications",
+        "description": "Receive email updates about your account"
+      },
+      "push": {
+        "title": "Push Notifications",
+        "description": "Receive push notifications on your devices"
+      },
+      "priceAlerts": {
+        "title": "Price Alerts",
+        "description": "Get notified about significant price changes"
+      },
+      "sentimentAlerts": {
+        "title": "Sentiment Alerts",
+        "description": "Get notified about sentiment changes"
+      },
+      "newsDigest": {
+        "title": "News Digest",
+        "description": "Receive daily news digest about your watchlist"
+      }
+    },
+    "preferences": {
+      "language": {
+        "title": "Language",
+        "en": "English",
+        "es": "Spanish",
+        "fr": "French",
+        "de": "German"
+      },
+      "theme": {
+        "title": "Theme",
+        "description": "Choose your preferred theme",
+        "light": "Light",
+        "dark": "Dark"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {{name}}",
+    "subtitle": "Here's what's happening with your watched assets",
+    "tabs": {
+      "overview": "Overview",
+      "watchlist": "Watchlist",
+      "trending": "Trending"
+    },
+    "stats": {
+      "marketCap": "Market Cap",
+      "volume": "Volume 24h",
+      "socialMentions": "Social Mentions",
+      "riskLevel": "Risk Level",
+      "moderate": "Moderate"
+    },
+    "overview": {
+      "marketSentiment": "Market Sentiment Overview",
+      "riskAnalysis": "Risk Analysis",
+      "marketNews": "Market News",
+      "impact": "Impact",
+      "socialTrends": "Social Trends",
+      "mentions": "mentions",
+      "trendStrength": "Trend Strength"
+    },
+    "watchlist": {
+      "title": "Your Watchlist",
+      "addAsset": "Add Asset",
+      "notificationsOn": "Notifications On",
+      "notificationsOff": "Notifications Off",
+      "addedOn": "Added",
+      "metrics": {
+        "sentiment": "Sentiment",
+        "riskScore": "Risk Score",
+        "trend": "Trend"
+      }
+    },
+    "trending": {
+      "title": "Trending Assets",
+      "timeframes": {
+        "24h": "24h",
+        "7d": "7d"
+      },
+      "metrics": {
+        "volume": "Vol",
+        "social": "Social",
+        "trendStrength": "Trend Strength"
+      }
+    }
+  }
+} 

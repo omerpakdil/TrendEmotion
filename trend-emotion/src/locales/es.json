@@ -1,0 +1,239 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "success": "Éxito",
+    "save": "Guardar Cambios",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "viewAll": "Ver todo",
+    "timeframes": {
+      "1h": "1H",
+      "24h": "24H",
+      "7d": "7D",
+      "30d": "30D"
+    }
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "forgotPassword": "¿Olvidaste tu Contraseña?",
+    "name": "Nombre Completo",
+    "noAccount": "¿No tienes una cuenta?",
+    "haveAccount": "¿Ya tienes una cuenta?"
+  },
+  "home": {
+    "hero": {
+      "title1": "Descubre el Mercado",
+      "title2": "Tendencias de Sentimiento",
+      "description": "Analiza el sentimiento del mercado en tiempo real. Toma decisiones basadas en datos con nuestras herramientas avanzadas de análisis de sentimiento y mantente adelante de las tendencias del mercado.",
+      "getStartedButton": "Comenzar",
+      "dashboardButton": "Ir al Panel"
+    },
+    "features": {
+      "subtitle": "Características",
+      "title": "Todo lo que necesitas para el análisis de mercado",
+      "description": "Obtén información en tiempo real sobre el sentimiento del mercado y toma decisiones informadas con nuestro completo conjunto de herramientas.",
+      "realtime": {
+        "title": "Análisis en Tiempo Real",
+        "description": "Obtén información instantánea sobre el sentimiento del mercado con nuestras herramientas de análisis en tiempo real."
+      },
+      "trends": {
+        "title": "Detección de Tendencias",
+        "description": "Identifica tendencias emergentes antes de que se vuelvan tendencia."
+      },
+      "alerts": {
+        "title": "Alertas Personalizadas",
+        "description": "Configura alertas personalizadas para los mercados que te interesan."
+      },
+      "analytics": {
+        "title": "Análisis Avanzado",
+        "description": "Profundiza en los datos del mercado con nuestras herramientas de análisis avanzado."
+      }
+    },
+    "stats": {
+      "activeUsers": {
+        "label": "Usuarios Activos",
+        "value": "10K+"
+      },
+      "marketsAnalyzed": {
+        "label": "Mercados Analizados",
+        "value": "100+"
+      },
+      "dailyAnalysis": {
+        "label": "Análisis Diarios",
+        "value": "1M+"
+      },
+      "accuracyRate": {
+        "label": "Tasa de Precisión",
+        "value": "95%"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "subtitle": "Comienza tu viaje hoy."
+    },
+    "footer": {
+      "product": {
+        "title": "Producto",
+        "features": "Características",
+        "pricing": "Precios",
+        "docs": "Documentación"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Acerca de",
+        "blog": "Blog",
+        "careers": "Carreras"
+      },
+      "support": {
+        "title": "Soporte",
+        "help": "Centro de Ayuda",
+        "contact": "Contáctanos",
+        "status": "Estado del Sistema"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacidad",
+        "terms": "Términos",
+        "security": "Seguridad"
+      },
+      "copyright": "© 2024 TrendEmotion. Todos los derechos reservados."
+    }
+  },
+  "navigation": {
+    "dashboard": "Panel",
+    "watchlist": "Lista de Seguimiento",
+    "analysis": "Análisis",
+    "profile": "Configuración del Perfil"
+  },
+  "profile": {
+    "title": "Configuración del Perfil",
+    "subtitle": "Administra la configuración y preferencias de tu cuenta",
+    "tabs": {
+      "general": "General",
+      "security": "Seguridad",
+      "notifications": "Notificaciones",
+      "preferences": "Preferencias"
+    },
+    "general": {
+      "profilePicture": "Foto de Perfil",
+      "changeAvatar": "Cambiar Avatar",
+      "fullName": "Nombre Completo",
+      "email": "Correo Electrónico"
+    },
+    "security": {
+      "twoFactor": {
+        "title": "Autenticación de Dos Factores",
+        "description": "Añade una capa extra de seguridad a tu cuenta"
+      },
+      "sessionTimeout": {
+        "title": "Tiempo de Sesión",
+        "15min": "15 minutos",
+        "30min": "30 minutos",
+        "1hour": "1 hora",
+        "2hours": "2 horas"
+      },
+      "changePassword": "Cambiar Contraseña",
+      "passwordDescription": "Actualiza tu contraseña para mantener tu cuenta segura",
+      "currentPassword": "Contraseña Actual",
+      "newPassword": "Nueva Contraseña",
+      "confirmNewPassword": "Confirmar Nueva Contraseña",
+      "passwordError": {
+        "mismatch": "Las nuevas contraseñas no coinciden",
+        "incorrect": "La contraseña actual es incorrecta",
+        "requirements": "La contraseña debe tener al menos 8 caracteres"
+      }
+    },
+    "notifications": {
+      "email": {
+        "title": "Notificaciones por Correo",
+        "description": "Recibe actualizaciones por correo sobre tu cuenta"
+      },
+      "push": {
+        "title": "Notificaciones Push",
+        "description": "Recibe notificaciones push en tus dispositivos"
+      },
+      "priceAlerts": {
+        "title": "Alertas de Precio",
+        "description": "Recibe notificaciones sobre cambios significativos de precio"
+      },
+      "sentimentAlerts": {
+        "title": "Alertas de Sentimiento",
+        "description": "Recibe notificaciones sobre cambios de sentimiento"
+      },
+      "newsDigest": {
+        "title": "Resumen de Noticias",
+        "description": "Recibe un resumen diario de noticias sobre tu lista de seguimiento"
+      }
+    },
+    "preferences": {
+      "language": {
+        "title": "Idioma",
+        "en": "Inglés",
+        "es": "Español",
+        "fr": "Francés",
+        "de": "Alemán"
+      },
+      "theme": {
+        "title": "Tema",
+        "description": "Elige tu tema preferido",
+        "light": "Claro",
+        "dark": "Oscuro"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido de nuevo, {{name}}",
+    "subtitle": "Esto es lo que está sucediendo con tus activos monitoreados",
+    "tabs": {
+      "overview": "Resumen",
+      "watchlist": "Lista de seguimiento",
+      "trending": "Tendencias"
+    },
+    "stats": {
+      "marketCap": "Capitalización de mercado",
+      "volume": "Volumen 24h",
+      "socialMentions": "Menciones sociales",
+      "riskLevel": "Nivel de riesgo",
+      "moderate": "Moderado"
+    },
+    "overview": {
+      "marketSentiment": "Resumen del sentimiento del mercado",
+      "riskAnalysis": "Análisis de riesgo",
+      "marketNews": "Noticias del mercado",
+      "impact": "Impacto",
+      "socialTrends": "Tendencias sociales",
+      "mentions": "menciones",
+      "trendStrength": "Fuerza de tendencia"
+    },
+    "watchlist": {
+      "title": "Tu Lista de Seguimiento",
+      "addAsset": "Añadir Activo",
+      "notificationsOn": "Notificaciones Activadas",
+      "notificationsOff": "Notificaciones Desactivadas",
+      "addedOn": "Añadido",
+      "metrics": {
+        "sentiment": "Sentimiento",
+        "riskScore": "Puntuación de Riesgo",
+        "trend": "Tendencia"
+      }
+    },
+    "trending": {
+      "title": "Activos en Tendencia",
+      "timeframes": {
+        "24h": "24h",
+        "7d": "7d"
+      },
+      "metrics": {
+        "volume": "Vol",
+        "social": "Social",
+        "trendStrength": "Fuerza de Tendencia"
+      }
+    }
+  }
+} 
