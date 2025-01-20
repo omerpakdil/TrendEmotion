@@ -10,10 +10,8 @@ Trend Emotion aims to empower users by providing real-time sentiment analysis fo
 
 ## Project Screenshots
 
-![screenshot1](https://github.com/user-attachments/assets/d87eff25-f733-44ae-b502-eaba6f14bd32)
-![screenshot4](https://github.com/user-attachments/assets/3c9757b3-c8eb-4ad1-b0f0-d6273bd288f9)
-
-
+![screenshot1](https://github.com/user-attachments/assets/39ad9ea6-7a2f-4b37-9474-774c6c5fdd8f)
+![screenshot4](https://github.com/user-attachments/assets/9cbfc459-80e2-47ac-840c-14cb9a1542bb)
 
 
 ## Core Features
@@ -141,4 +139,23 @@ Communicate the platform’s value proposition clearly and encourage user sign-u
 ### Phase 3: Optimization
 - Integrate AI-based recommendations.
 - Enhance platform scalability and performance.
+
+## How to Run the Project
+
+### UI Development
+To run the frontend of the project, navigate to the **TrendEmotion** directory and execute the following command:
+```bash
+npm run dev
+```
+
+### Backend Development
+To start the backend, navigate to the **backend** directory and execute:
+```bash
+npm run dev
+```
+
+Ensure all dependencies are installed beforehand by running:
+```bash
+npm install
+```
 
