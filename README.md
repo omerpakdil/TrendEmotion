@@ -10,7 +10,8 @@ Trend Emotion aims to empower users by providing real-time sentiment analysis fo
 
 ## Project Screenshots
 
-![screenshot1](https://github.com/user-attachments/assets/82d1a142-57c7-43f0-a150-eeea4e550eb5)
+![screenshot1](https://github.com/user-attachments/assets/1da7b232-6009-4a67-a414-06a55879a099)
+
 
 
 ## Core Features
